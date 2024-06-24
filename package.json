@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js",
+    "start": "nodemon ./src/index.js",
+    "dev": "nodemon ./src/index.js node-sass -w src/resources/scss/app.scss src/publics/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +23,12 @@
   },
   "homepage": "https://github.com/huycuuvan/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.3",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "node-sass": "^9.0.0",
     "nodemon": "^3.1.4"
   }
 }
